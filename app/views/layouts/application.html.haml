@@ -1,0 +1,43 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
+    %title Up Make
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  %body
+    %header.header
+      .header__menu
+        .header__menu__box
+          .header__menu__box__title
+            %a{:href => "/"} Up Make
+          - if user_signed_in?
+            .header__menu__box__title__mypage
+            %span.header__menu__box__title__mypage__nickname
+              = current_user.nickname
+              %ul.header__menu__box__title__mypage__icon
+                %li.header__menu__box__title__mypage__icon__info
+                  = link_to "/users/#{current_user.id}" do
+                    MyPage
+                %li.header__menu__box__title__mypage__icon__delete-user
+                  = link_to destroy_user_session_path(), method: :delete do
+                    SingOut
+                    -# = icon('fa', 'sing-out-alt')
+                %li.header__menu__box__title__mypage__icon__edit-user
+                  = link_to edit_user_registration_path(current_user.id), method: :get do
+                    = icon('fa', 'cog')
+
+            .header__menu__box__title__post
+              %ul.header__menu__box__title__post__icon
+                %li.header__menu__box__title__post__icon__create-post
+                  = link_to '/posts/new' do
+                    = icon('fa', 'pen')
+
+
+= yield
+
+%footer.footer
+  .footer__menu
+    %a{:href => "/"} Up Make 2020

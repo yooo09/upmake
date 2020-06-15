@@ -1,0 +1,32 @@
+.contents {
+  .success-contents {
+    padding-top: 20%;
+    margin-bottom: 20%;
+    &__box {
+      border: solid 2px #fad0c4;
+      background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+      background-blend-mode: screen;
+      border-radius: 5px;
+      width: 60%;
+      margin: 20px auto;
+      padding: 20px;
+      text-align: center;
+      &__comment {
+        margin-bottom: 10px;
+        h3 {
+          color:  #596164;
+        }
+      }
+      &__btn {
+        height: 50px;
+        padding: 20px 30px;
+        &__edit-btn {
+          text-decoration: none;
+          cursor: pointer;
+          font-size: 15px;
+          color: #f68084;
+        }
+      }
+    }
+  }
+}

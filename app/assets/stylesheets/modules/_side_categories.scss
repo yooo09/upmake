@@ -1,0 +1,74 @@
+.side-categories {
+  padding-top: 120px;
+  height: 100vh;
+  width: 230px;
+  margin-right: 20px;
+  
+
+  .category-header {
+    width: 90%;
+    border: solid 2px #fad0c4;
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: screen;
+    border-radius: 5px;
+    height: calc(100vh - 120px);
+    overflow: scroll;
+    padding: 20px;
+    margin-top: 20px;
+    &__box {
+      
+
+      &__menu {
+        
+        display: flex;
+        &__new-group {
+         .fa-pen:before {
+           margin-right: 5px;
+           color:  #f68084;
+         }
+        }
+      }
+    }
+  }
+  .category-groups {
+    .categories {
+      a.categorys__link {
+        text-decoration: none;
+      }
+      &__category-title {
+        color: #f68084;
+        font-weight: bold;
+        font-size: 14px;
+        border: solid 1px #f68084;
+        border-radius: 15px;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+  }
+
+}
+// .category-groups
+//   - @categories.each do |category|
+//     .categorys
+//       = link_to '#' do
+  
+//         %p.categories__category-title
+//           = category.title
+// .wrapper
+//   .side-categorys
+//     .category-header
+//       .category-header__box
+//         %ul.category-header__box__menu
+//           %li.category-header__box__new-group
+//     -#         = link_to new_group_path() do
+//     -#           = icon('far','edit')
+
+//     .category-groups
+//       -# - categorys.each do |category|
+//       -#   .categorys
+//       -#     = link_to category_posts_path(category), class: "categorys" do
+//       -#       %p.categorys__category-name
+//       -#         = category.name
+//       -#       %p.categorys__category-message
+//       -#         = category.show_last_message

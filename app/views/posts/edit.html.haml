@@ -1,0 +1,16 @@
+.form
+  = form_for [@post] do |f|
+    .contener
+      %ul.contener__header
+        %li.contener__header__icon
+          = icon('fa', 'pen')
+        %li.contener__header__logo
+          編集する
+    .contener-text
+      = f.text_area :text, class: 'contener-text__text'
+      -# = f.text_field :image, placeholder: "Image Url"
+    .contener-image
+      = f.label :image, class: 'contener-image__image' do
+        = icon('fas', 'image', class: 'contener-image__image__icon')
+        = f.file_field :image, class: 'contener-image__image__file'
+    = f.submit 'share', class: 'share-btn'

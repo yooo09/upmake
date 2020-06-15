@@ -1,0 +1,89 @@
+.header {
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 3;
+  .header__menu {
+    height:70px;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    display: block;
+    margin: 0 auto;
+
+    animation: huerotator 10s infinite alternate;
+
+
+
+    &__box {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      &__title {
+        a {
+          color:#fad0c4;
+          font-size: 40px;
+          text-decoration: none;
+          margin-left: 50px;
+        }
+        &__mypage {
+          &__nickname {
+          font-weight: bold;
+          display: block;
+          cursor: pointer;
+          z-index: 2;
+          text-align: right;
+          color: #f68084;
+          font-size: 20px;
+          height: 35px;
+          width: 70px;
+          &:hover ul {
+            display: block;
+          }
+          ul {
+            text-align: center;
+            display: none;
+            border-radius: 5px;
+            border: solid 2px #fad0c4;
+            background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+            a {
+              font-size: 13px;
+              color: #f68084;
+              text-decoration: none;
+            }
+          }
+          }
+        }
+        &__post {
+          ul {
+            a {
+              font-size: 13px;
+              color: #f68084;
+              font-size: 20px;
+              margin-right: 20px;
+              text-align: left;
+            }
+          }
+
+        }
+
+
+      }
+    }
+  }
+}
+@keyframes huerotator {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+// .header__menu__box__title__post
+//               %ul.header__menu__box__title__post__icon
+//                 %li.header__menu__box__title__post__icon__create-post
+//                   = link_to '/posts/new' do
+//                     = icon('fa', 'pen')

@@ -1,0 +1,33 @@
+.form
+  = form_for [@post] do |f|
+    .contener
+      %ul.contener__header
+        %li.contener__header__icon
+          = icon('fa', 'pen')
+        %li.contener__header__logo
+          投稿する
+
+    -# .contener-category
+    .category-header__box
+      %ul.category-header__box__menu
+        -# %li.category-header__box__menu__new-group
+        -#   = icon('fa','pen')
+        %li.category-header__box__menu__name
+          = link_to new_category_path(), class: 'category-header__box__menu__name__create' do
+            新規カテゴリ作成
+      -# = f.label '選んでください'
+      = f.collection_check_boxes :category_ids, Category.all, :id, :title, class: 'category-header__box__menu__checkboxes'
+
+    .contener-text
+      = f.text_area :text, class: 'contener-text__text'
+      -# = f.text_field :image, placeholder: "Image Url"
+    .contener-image
+      = f.label :image, class: 'contener-image__image' do
+        = icon('fas', 'image', class: 'contener-image__image__icon')
+        = f.file_field :image, class: 'contener-image__image__file'
+
+    = f.submit 'share', class: 'share-btn'
+
+  -# = form_for [@category] do |f|
+  -#   = f.collection_check_boxes :category_ids, Category.all, :id, :title
+  -#   = f.submit 'share', class: 'share-btn'

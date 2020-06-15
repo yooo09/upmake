@@ -1,0 +1,111 @@
+.form {
+  padding: 100px 40px;
+  form {
+    text-align: center;
+    .contener {
+      &__header {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        &__icon {
+          margin-right: 5px;
+          color:#f68084;
+        }
+        &__logo {
+          color: #868f96;
+          font-size: 18px;
+        }
+      }
+    }
+    .category-header__box{
+      &__menu {
+        &__name {
+          margin-bottom: 5px;
+          a.category-header__box__menu__name__create {
+            font-size: 15px;
+            color:#f68084;
+          }
+        }
+      }
+      input {
+        margin-left: 7px;
+      }
+      label {
+        color:#f68084;
+        font-size: 13px;
+      }
+    }
+
+    .contener-text {
+      &__text {
+        margin-top: 15px;
+        padding: 15px;
+        height: 60vh;
+        width: 70vh;
+        border: solid 1px #f68084;
+        border-radius: 15px;
+        color:  #596164;
+        
+      }
+      
+      &__category-title {
+        border: solid 1px #f68084;
+        border-radius: 15px;
+        font-size: 13px;
+        text-decoration: none;
+        height: 45px;
+        width: 300px;
+        padding: 10px;
+        // color: #ebedee;
+        margin-bottom: 20px;
+        margin-top: 30px;
+      }
+    }
+    .contener-image {
+      margin: 20px 0;
+      height: 30px;
+      text-align: center;
+      &__image {
+        &__icon{
+          font-size: 50px;
+          color:#f68084;
+          cursor: pointer;
+        }
+        &__file{
+          display: none;
+        }
+      }
+    }
+    .share-btn {
+      height: 50px;
+      width: 150px;
+      background-color:#fad0c4;
+      color: white;
+      padding: 0 30px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      
+      
+      
+    }
+  }
+
+}
+
+// .share-btn {
+//   height: 50px;
+//   width: 150px;
+//   background-color:#fad0c4;
+//   color: white;
+//   padding: 0 30px;
+//   margin-top: 20px;
+//   border: none;
+//   border-radius: 25px;
+//   cursor: pointer;
+// }
+// }
+
+// }
