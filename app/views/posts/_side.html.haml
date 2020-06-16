@@ -10,7 +10,7 @@
     -#         新規カテゴリ作成
     .category-groups
       = link_to new_category_path(),  method: :get, class: "categorys__link" do
-        新規登録
+        カテゴリ登録
         - @categories.each do |category|
           .categories
             = link_to "#", class: "categorys__link" do
