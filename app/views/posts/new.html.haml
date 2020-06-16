@@ -13,8 +13,8 @@
         -# %li.category-header__box__menu__new-group
         -#   = icon('fa','pen')
         %li.category-header__box__menu__name
-          = link_to new_category_path(), class: 'category-header__box__menu__name__create' do
-            新規カテゴリ作成
+          -# = link_to new_category_path(), class: 'category-header__box__menu__name__create' do
+          -#   新規カテゴリ作成
       -# = f.label '選んでください'
       = f.collection_check_boxes :category_ids, Category.all, :id, :title, class: 'category-header__box__menu__checkboxes'
 

@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   # before_action :set_group
 
   def index
-    # @categories = Category.all
+    @categories = Category.all
     
   end
 
@@ -38,6 +38,12 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Post.find(params[:id])
+  end
+
+  def destroy
+    category = Category.find(params[:id])
+    category.destroy
+    # redirect_to root_path
   end
 
   private

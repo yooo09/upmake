@@ -31,10 +31,19 @@
     }
   }
   .category-groups {
+    a {
+      color: #f68084;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
     .categories {
+      margin-top: 5px;
+      // display: flex;
       a.categorys__link {
         text-decoration: none;
       }
+      
       &__category-title {
         color: #f68084;
         font-weight: bold;
@@ -44,10 +53,41 @@
         text-align: center;
         margin-top: 10px;
       }
+      &__category-icon {
+        cursor: pointer;
+        z-index: 2;
+        text-align: right;
+        cursor: pointer;
+        color: #f68084;
+        font-size: 15px;
+        height: 35px;
+        width: 35px;
+        &:hover ul {
+          display: block;
+        ul {
+          text-align: center;
+          display: none;
+          border-radius: 5px;
+          border: solid 2px #fad0c4;
+          background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+          a {
+            font-size: 13px;
+            color: #f68084;
+            text-decoration: none;
+          }
+        }
+
+        }
+      }
     }
   }
 
 }
+
+
+
+
+
 // .category-groups
 //   - @categories.each do |category|
 //     .categorys

@@ -9,21 +9,18 @@
     -#       = link_to new_category_path() do
     -#         新規カテゴリ作成
     .category-groups
-      - @categories.each do |category|
-        .categories
-          -# = link_to "/category/#{category.id}",  method: :get, class: "categorys__link" do
-          = link_to "#", class: "categorys__link" do
-            .categories__category-title
-              = category.title
+      = link_to new_category_path(),  method: :get, class: "categorys__link" do
+        新規登録
+        - @categories.each do |category|
+          .categories
+            = link_to "#", class: "categorys__link" do
+              .categories__category-title
+                = category.title
+              .categories__category-icon
+                -# %span
+                -#   = icon('fa', 'angle-down')
+                %ul.categories__category-delete
+                  %li.categories__category-delete__link
+                    = link_to "/categories/#{category.id}",  method: :delete do
+                      削除
 
-
-        -# %p.categories__category-message
-        -#   = category.show_last_message
-
--# .category-groups
--#   - categories.each do |category|
--#     .categorys
--#       = link_to '#' do
--#       = link_to category_posts_path(category), class: "categories" do
--#         %p.categories__category-title
--#           = category.title
