@@ -21,13 +21,13 @@
                   %li.contentleft__post__list__more__btn__delete
                     = link_to '削除', "/posts/#{post.id}",  method: :delete
           .contentleft__post__data
-            %p.contentleft__post__data__data
+            .contentleft__post__data__data
               = post.created_at.strftime("%Y/%m/%d")
           .contentleft__post__text
-            %p.contentleft__post__text__text
+            .contentleft__post__text__text
               = simple_format(post.text)
           .contentleft__post__image
-            %p.contentleft__post__image__photo
+            .contentleft__post__image__photo
               = image_tag post.image.url, class: 'contentleft__post__image__photo' if post.image.present?
 
     = paginate(@posts)

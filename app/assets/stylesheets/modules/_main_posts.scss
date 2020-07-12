@@ -1,16 +1,3 @@
-// @import 'https://fonts.googleapis.com/css?family=Permanent+Marker';
-
-// $r : 50px;  // glow radius
-// $o : 25px;  // glow offset
-// $d : 2s;    // duration
-// $chars : 7; // # of letters
-// $bg : #111; // background color
-
-// $c : cyan yellow tomato;
-
-
-
-
 .content{
   height: 100%;
   padding-top: 100px;
@@ -18,49 +5,7 @@
   font-size: 15px;
   text-align: center;
   width: calc(100% - 230px);
-  
-
-
-  // animation: glow $d ease-in-out both infinite;   
-  
-  //   @for $i from 1 through $chars {
-  //       &:nth-child(#{$i}) {
-  //           animation-delay: $i/$chars * -$d;
-  //       }
-  //   }
-  //   @mixin glow($c1, $c2, $c3) {
-  //     text-shadow:
-  //         0 0 $r/6 snow,
-  //         0 (-$o) $r $c3,
-  //         (-$o) $o $r $c2,
-  //         $o $o $r $c3;
-  // }
-  
-  // @keyframes glow {
-  //     0%, 100% {
-  //         @include glow(nth($c, 1), nth($c, 2), nth($c, 3));  
-  //     }
-  //     33% {
-  //         @include glow(nth($c, 2), nth($c, 3), nth($c, 1));
-  //     }
-  //     66% {
-  //         @include glow(nth($c, 3), nth($c, 1), nth($c, 2));
-  //     }
-  // }
-
-
-
   .contents {
-    // height: 100%;
-    // // background-color: white;
-    // padding-top: 120px;
-    // overflow: scroll;
-    // color:  #596164;
-    // font-size: 15px;
-    // text-align: center;
-    // width: calc(100% - 230px);
-    
-
     .contentleft__post {
       border: solid 2px #fad0c4;
       background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
@@ -69,7 +14,6 @@
       width: 85%;
       margin: 20px auto;
       padding: 20px;
-      text-align: left;
 
       &__list {
         display: flex;
@@ -141,23 +85,23 @@
       &__data {
         font-size: 11px;
         margin-bottom: 10px;
+        &__data  {
+          text-align: left;
+        }
       }
 
       &__text {
         margin-bottom: 10px;
         word-wrap: break-word;
-        p {
+        &__text {
           color: #868f96;
           font-size: 16px;
         }
       }
       &__image {
-        p {
+        &__photo {
           padding-left: 20px;
-          img {
-            text-align: center;
-            width: 60%;
-          }
+          width: 60%;
         }
       }
       &__conteiner {
@@ -170,7 +114,6 @@
           margin-left: 20px;
           margin-bottom: 20px;
           }
-        
         .contentleft__conteiner__form__btn {
           color:  #868f96;
           border: none;
