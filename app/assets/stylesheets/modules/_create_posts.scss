@@ -20,12 +20,13 @@
       &__btn {
         height: 50px;
         padding: 20px 30px;
-        &__edit-btn {
+        a {
           text-decoration: none;
           cursor: pointer;
           font-size: 15px;
           color: #f68084;
         }
+        
       }
     }
   }
