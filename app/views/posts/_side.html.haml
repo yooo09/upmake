@@ -1,26 +1,26 @@
--# .wrapper
-.side-categories
-  .category-header
-    -# .category-header__box
-    -#   %ul.category-header__box__menu
-    -#     %li.category-header__box__menu__new-group
-    -#       = icon('fa','pen')
-    -#     %li.category-header__box__menyu__new-group-name
-    -#       = link_to new_category_path() do
-    -#         新規カテゴリ作成
-    .category-groups
-      = link_to new_category_path(),  method: :get, class: "categorys__link" do
-        カテゴリ登録
-        - @categories.each do |category|
-          .categories
-            = link_to "#", class: "categorys__link" do
-              .categories__category-title
-                = category.title
-              .categories__category-icon
-                -# %span
-                -#   = icon('fa', 'angle-down')
-                %ul.categories__category-delete
-                  %li.categories__category-delete__link
-                    = link_to "/categories/#{category.id}",  method: :delete do
-                      削除
+-# -# .wrapper
+-# .side-categories
+-#   .category-header
+-#     -# .category-header__box
+-#     -#   %ul.category-header__box__menu
+-#     -#     %li.category-header__box__menu__new-group
+-#     -#       = icon('fa','pen')
+-#     -#     %li.category-header__box__menyu__new-group-name
+-#     -#       = link_to new_category_path() do
+-#     -#         新規カテゴリ作成
+-#     .category-groups
+-#       = link_to new_category_path(),  method: :get, class: "categorys__link" do
+-#         カテゴリ登録
+-#         - @categories.each do |category|
+-#           .categories
+-#             = link_to "#", class: "categorys__link" do
+-#               .categories__category-title
+-#                 = category.title
+-#               .categories__category-icon
+-#                 -# %span
+-#                 -#   = icon('fa', 'angle-down')
+-#                 %ul.categories__category-delete
+-#                   %li.categories__category-delete__link
+-#                     = link_to "/categories/#{category.id}",  method: :delete do
+-#                       削除
 

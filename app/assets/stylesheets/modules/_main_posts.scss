@@ -2,9 +2,10 @@
   height: 100%;
   padding-top: 100px;
   color: #f68084;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
-  width: calc(100% - 230px);
+  width: calc(100% - 430px);
+  margin: 0 auto;
   .contents {
     .contentleft__post {
       border: solid 2px #fad0c4;
@@ -20,23 +21,23 @@
         justify-content: space-between;
         margin-bottom: 10px;
         color:  #596164;
-
         ul {
           a{
-          color: #f68084;
-          font-weight: bold;
-          font-size: 17px;
-          text-decoration: none;
+            color: #f68084;
+            font-weight: bold;
+            font-size: 17px;
+            text-decoration: none;
+            &:hover {
+              color: #868f96;
+            }
           }
-
         }
         &__more {
           cursor: pointer;
           z-index: 2;
           text-align: right;
-          cursor: pointer;
           color: #f68084;
-          font-size: 15px;
+          font-size: 20px;
           height: 35px;
           width: 35px;
           &:hover ul {
@@ -83,13 +84,13 @@
         }
       }
       &__data {
-        font-size: 11px;
+        font-size: 15px;
         margin-bottom: 10px;
+        padding-left: 20px;
         &__data  {
           text-align: left;
         }
       }
-
       &__text {
         margin-bottom: 10px;
         word-wrap: break-word;
@@ -100,10 +101,9 @@
       }
       &__image {
         &__photo {
-          padding-left: 20px;
           width: 60%;
+          margin: 0 auto;
           img {
-            
           }
         }
       }
@@ -116,12 +116,28 @@
           margin-top: 20px;
           margin-left: 20px;
           margin-bottom: 20px;
+          width: 40%;
+          }
+          ::placeholder {
+            padding-left: 10px;
+            font-size: 15px;
+            color: #cdd;
           }
         .contentleft__conteiner__form__btn {
           color:  #868f96;
           border: none;
           position: absolute;
-
+          margin-left: 20px;
+          margin-top: 70px;
+          border-radius: 5px;
+          border: solid 2px #fad0c4;
+          background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+          cursor: pointer;
+        }
+        input {
+          color:  #868f96;
+          border: none;
+          position: absolute;
           margin-left: 20px;
           margin-top: 70px;
           border-radius: 5px;
@@ -135,27 +151,70 @@
       color:  #868f96;
       h4 {
         margin-bottom: 15px;
+        font-size: 15px;
       }
       &__name {
-        a {
+        display: flex;
+        &__name {
+          a {
           color: #f68084;
+          text-decoration: none;
+          padding-left: 130px;
+          }
         }
-
-        p.contentleft__post__comments__data__data {
+        .contentleft__post__comments__data__data {
           font-size: 12px;
-          margin-bottom: 3px;
+          margin-left: 20px;
+          line-height: 30px;
         }
       }
       &__text {
         font-size: 13px;
-        p {
-
+        width: 100%;
+        background-color: white;
+        height: 100%;
+        border-radius: 10px;
+        padding: 10px;
+        display: inline-block;
+        position: relative; 
+        margin: 0 0 0 50px;
+        padding: 10px;
+        max-width: 500px;
+        border-radius: 12px;
+        background: white;
+        &__text {
+          padding-left: 5px;
+          p {
+           text-align: left;
+          }
+        }
+        &__delete {
+          text-align: right;
+          padding-right: 5px;
+          a {
+            text-decoration: none;
+            color:  #868f96;
+            font-size: 11px;
+            &:hover {
+              color: #f68084;
+            }
+          }
         }
       }
+      &__text:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 3px; 
+        left: -19px;
+        border: 8px solid transparent;
+        border-right: 18px solid white;
+        -webkit-transform: rotate(35deg);
+        transform: rotate(35deg);
+      }
+      
     }
   }
-
-    
   nav {
     color:  #868f96;
     margin-bottom: 20px;

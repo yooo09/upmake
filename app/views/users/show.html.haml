@@ -6,53 +6,27 @@
     - @posts.each do |post|
       .contentleft__post
         .contentleft__post__list
-          -# %ul.content__post__list__link
-          -#   = link_to post.user.nickname, "/posts/#{post.id}"
-          -# - if user_signed_in? && current_user.id == post.user_id
           .contentleft__post__list__show
             %span
               = icon('fa', 'angle-down')
             %ul.contentleft__post__list__more__btn
               %li.contentleft__post__list__more__btn__show
                 = link_to '詳細', "/posts/#{post.id}",  method: :get
-            - if user_signed_in? && current_user.id == post.user_id
-              %ul.contentleft__post__list__more__btn 
+              - if user_signed_in? && current_user.id == post.user_id
                 %li.contentleft__post__list__more__btn__edit
                   = link_to '編集', "/posts/#{post.id}/edit",  method: :get
                 %li.contentleft__post__list__more__btn__delete
                   = link_to '削除', "/posts/#{post.id}",  method: :delete
         .contentleft__post__data
-          %p.contentleft__post__data__data
+          .contentleft__post__data__data
             = post.created_at.strftime("%Y/%m/%d")
         .contentleft__post__text
-          %p.contentleft__post__text__text
+          .contentleft__post__text__text
             = simple_format(post.text)
         .contentleft__post__image
-          %p.contentleft__post__image__photo
+          .contentleft__post__image__photo
             = image_tag post.image.url, class: 'contentleft__post__image__photo' if post.image.present?
-  
-        -# .contentleft__post__conteiner
-        -#   - if current_user
-        -#     = form_for [@post, @comment], local: true do |f|
-        -#       .contentsleft__conteiner__form
-        -#         = f.text_area :text, placeholder: "コメントする", rows: "3"
-        -#         = f.submit "投稿する", class: 'contentsleft__conteiner__form__btn'
-        -# .contentleft__post__comments
-        -#   %h4 コメント一覧
-        -#   - if @comments
-        -#     - @comments.each do |comment|
-        -#       .contentleft__post__comments__name
-        -#         %p.contentleft__post__comments__name__name
-        -#           = link_to comment.user.nickname, "/users/#{comment.user_id}", method: :get
-        -#         %p.contentleft__post__comments__data__data
-        -#           = comment.created_at.strftime("%Y/%m/%d")
-        -#       .contentleft__post__comments__text
-        -#         %p.contentleft__post__comments__text__text
-        -#           = simple_format(comment.text)
 
   -# = render 'posts/side' 
-  
-  
-  
-  
+
   = paginate(@posts)

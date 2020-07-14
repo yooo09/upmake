@@ -9,7 +9,7 @@
         justify-content: center;
         margin-bottom: 20px;
         &__icon {
-          margin-right: 5px;
+          margin-right: 10px;
           color:#f68084;
         }
         &__logo {
@@ -36,19 +36,16 @@
         font-size: 13px;
       }
     }
-
     .contener-text {
       &__text {
         margin-top: 15px;
         padding: 15px;
         height: 60vh;
-        width: 70vh;
+        width: 50%;
         border: solid 1px #f68084;
         border-radius: 15px;
         color:  #596164;
-        
       }
-      
       &__category-title {
         border: solid 1px #f68084;
         border-radius: 15px;
@@ -57,7 +54,6 @@
         height: 45px;
         width: 300px;
         padding: 10px;
-        // color: #ebedee;
         margin-bottom: 20px;
         margin-top: 30px;
       }
@@ -87,25 +83,10 @@
       border: none;
       border-radius: 25px;
       cursor: pointer;
-      
-      
-      
+      &:hover {
+        color: #f68084;
+      }
     }
   }
-
+  
 }
-
-// .share-btn {
-//   height: 50px;
-//   width: 150px;
-//   background-color:#fad0c4;
-//   color: white;
-//   padding: 0 30px;
-//   margin-top: 20px;
-//   border: none;
-//   border-radius: 25px;
-//   cursor: pointer;
-// }
-// }
-
-// }

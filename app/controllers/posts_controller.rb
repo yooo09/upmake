@@ -3,31 +3,16 @@ class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @categories = Category.all
+    # @categories = Category.all
     @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
     @post = Post.new
-    # @category = Category.new
   end
 
   def create
-
     @post = Post.create(post_params)
-    # redirect_to @post
-    # @post = Post.new(_params)
-    # category_list = params[:post][:category_title].split(",")
-    # respond_to do |format|
-    #   if @post.save
-    #     @post.save_posts(category_list)
-    #     # format.html { redirect_to @post, notice: '記事を投稿しました' }
-    #     # format.json { render :show, status: :created, location: @blog }
-    #   else
-    #     # format.html { render :new }
-    #     # format.json { render json: @blog.errors, status: :unprocessable_entity }
-    #   end
-    # end
   end
 
   def destroy
@@ -44,7 +29,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @categories = Category.all
+    # @categories = Category.all
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
   end
@@ -52,9 +37,8 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    # params.require(:post).permit(:text, :image, :category_ids[]).merge(user_id: current_user.id)
-    params.require(:post).permit(:text, :image, :category_ids).merge(user_id: current_user.id)
-
+    params.require(:post).permit(:text, :image).merge(user_id: current_user.id)
+    # params.require(:post).permit(:text, :image, :category_ids).merge(user_id: current_user.id)
   end
 
   def set_post

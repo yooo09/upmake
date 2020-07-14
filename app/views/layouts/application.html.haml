@@ -1,4 +1,24 @@
 !!!
+<!闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇
+闇　     ホラー経験値　　　　　　　　　　　　　　  　　闇
+闇　ホラー映画　　　　　　　　　　　　　　　　　　　　闇
+闇　　・エルム街の悪魔　　　　　　　　　　　　　　　  　闇
+闇　　・リング　　　　　　　　　　　　　　　　　　　  　闇
+闇　　・犬鳴村　　　　　　　　　　　　　　　　　　　  　闇
+闇　ホラー体験　　　　　　　　　　　　　　　　　　　  　闇
+闇　　・富士急：戦慄迷宮　　　　　　　　　　　　　    　  　闇
+闇　　・USJ：貞子　　　　　　　　　　　　　　　　　    闇
+闇　　・ひらパー：闇遊園地でかくれんぼ　　　　　　　   　闇
+闇　ゾンビ映画　　　　　　　　　　　　　　　　　　　　  闇
+闇　　・霊幻道士　　　　　　　　　　　　　　　　　　    　闇
+闇　　・biohazard　　　　　　　　　　　　　　　　　   闇
+闇　　・ウォーキングデッド　　　　　　　　　　　　　  　闇
+闇　ゾンビ体験　　　　　　　　　　　　　　　　　　　  　闇
+闇　　・USJ：ホラーナイト2019/2018/2017/2016/2015　闇
+闇　　　　　　　　　　　　　　　　　　　　　　　　　  　闇
+闇　　　　ご覧いただき、ありがとうございます。　  　  闇
+闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇闇!>
+
 %html
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
@@ -20,20 +40,20 @@
               %ul.header__menu__box__title__mypage__icon
                 %li.header__menu__box__title__mypage__icon__info
                   = link_to "/users/#{current_user.id}" do
-                    MyPage
-                %li.header__menu__box__title__mypage__icon__delete-user
-                  = link_to destroy_user_session_path(), method: :delete do
-                    SingOut
-                    -# = icon('fa', 'sing-out-alt')
+                    My page
                 %li.header__menu__box__title__mypage__icon__edit-user
                   = link_to edit_user_registration_path(current_user.id), method: :get do
-                    = icon('fa', 'cog')
+                    アカウント
+                %li.header__menu__box__title__mypage__icon__delete-user
+                  = link_to destroy_user_session_path(), method: :delete do
+                    ログアウト
 
             .header__menu__box__title__post
               %ul.header__menu__box__title__post__icon
                 %li.header__menu__box__title__post__icon__create-post
                   = link_to '/posts/new' do
                     = icon('fa', 'pen')
+                    POST
 
 
 = yield
