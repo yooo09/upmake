@@ -11,7 +11,7 @@
     -#     %li.category-header__box__menu__name
     -#   = f.collection_check_boxes :category_ids, Category.all, :id, :title, class: 'category-header__box__menu__checkboxes'
     .contener-text
-      = f.text_field :text, class: 'contener-text__text'
+      = f.text_area :text, class: 'contener-text__text'
     .contener-image
       = f.label :image, class: 'contener-image__image' do
         = icon('fas', 'image', class: 'contener-image__image__icon')
