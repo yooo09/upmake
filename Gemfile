@@ -59,6 +59,7 @@ gem 'mini_magick'
 gem 'devise'
 gem 'kaminari'
 gem 'pry-rails'
+gem 'fog-aws'
 group :production do
   gem 'pg'
 end
