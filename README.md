@@ -1,30 +1,28 @@
-# README
-
 ## アプリケーション名　：　UpMake
 
 ### 概要
-#### ・美容に関する記事、画像を投稿・またはコメントを行うアプリケーションです。
+##### ・美容に関する記事、画像を投稿・またはコメントを行うアプリケーションです。
 
 ### 接続先情報
-#### [・　URL](http://upmake.herokuapp.com/)
+#### URL http://upmake.herokuapp.com/
 
 #### テスト用アカウント等
-#### ・投稿者１
-#### 　メールアドレス: test@t.com
-#### 　パスワード: test000
-#### ・投稿者２
-#### 　メールアドレス: test@t.jp
-#### 　パスワード: test000
+##### ・投稿者１
+##### 　メールアドレス: test@t.com
+##### 　パスワード: test000
+##### ・投稿者２
+##### 　メールアドレス: test@t.jp
+##### 　パスワード: test000
 
 ### Githubリポジトリ
-#### [・　URL](https://github.com/yooo09/upmake)
+##### URL https://github.com/yooo09/upmake
 
 ### 開発環境
-#### Ruby/Ruby on Rails/MySQL/Github/Heroku/Visual Studio Code
+##### Ruby/Ruby on Rails/MySQL/Github/Heroku/Visual Studio Code
 
 ### 制作背景
-#### 様々なSNSがある中で、発進内容も様々なものが多いので
-#### 一つの種別に特化しているアプリケーションがあると発信や検索が容易になると思い作成しました。
+##### 様々なSNSがある中で、発進内容も様々なものが多いので
+##### 一つの種別に特化しているアプリケーションがあると発信や検索が容易になると思い作成しました。
 
 ## usersテーブル
 |Column|Type|Options|
