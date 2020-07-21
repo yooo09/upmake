@@ -1,27 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション名　：　UpMake
 
-Things you may want to cover:
+### 概要
+#### ・美容に関する記事、画像を投稿・またはコメントを行うアプリケーションです。
 
-* Ruby version
+### 接続先情報
+#### [・　URL](http://upmake.herokuapp.com/)
 
-* System dependencies
+#### テスト用アカウント等
+#### ・投稿者１
+#### 　メールアドレス: test@t.com
+#### 　パスワード: test000
+#### ・投稿者２
+#### 　メールアドレス: test@t.jp
+#### 　パスワード: test000
 
-* Configuration
+### Githubリポジトリ
+#### [・　URL](https://github.com/yooo09/upmake)
 
-* Database creation
+### 開発環境
+#### Ruby/Ruby on Rails/MySQL/Github/Heroku/Visual Studio Code
 
-* Database initialization
+### 制作背景
+#### 様々なSNSがある中で、発進内容も様々なものが多いので
+#### 一つの種別に特化しているアプリケーションがあると発信や検索が容易になると思い作成しました。
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 ## usersテーブル
 |Column|Type|Options|
