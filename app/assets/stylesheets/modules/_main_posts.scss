@@ -206,21 +206,24 @@
         content: "";
         display: inline-block;
         position: absolute;
-        top: 3px; 
+        top: 3px;
         left: -19px;
         border: 8px solid transparent;
         border-right: 18px solid white;
         -webkit-transform: rotate(35deg);
         transform: rotate(35deg);
       }
-      
     }
   }
   nav {
+    font-size: 15px;
     color:  #868f96;
     margin-bottom: 20px;
     a {
       color:  #868f96;
+    &:hover {
+      color:  #020202;
+    }
     }
   }
 }
